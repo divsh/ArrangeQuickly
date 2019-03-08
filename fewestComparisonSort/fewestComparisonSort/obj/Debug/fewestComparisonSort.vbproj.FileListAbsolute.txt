@@ -1,0 +1,10 @@
+C:\A1\work\fewestComparisonSort\fewestComparisonSort\fewestComparisonSort\bin\Debug\fewestComparisonSort.exe.config
+C:\A1\work\fewestComparisonSort\fewestComparisonSort\fewestComparisonSort\bin\Debug\fewestComparisonSort.exe
+C:\A1\work\fewestComparisonSort\fewestComparisonSort\fewestComparisonSort\bin\Debug\fewestComparisonSort.pdb
+C:\A1\work\fewestComparisonSort\fewestComparisonSort\fewestComparisonSort\bin\Debug\fewestComparisonSort.xml
+C:\A1\work\fewestComparisonSort\fewestComparisonSort\fewestComparisonSort\obj\Debug\fewestComparisonSort.Form1.resources
+C:\A1\work\fewestComparisonSort\fewestComparisonSort\fewestComparisonSort\obj\Debug\fewestComparisonSort.Resources.resources
+C:\A1\work\fewestComparisonSort\fewestComparisonSort\fewestComparisonSort\obj\Debug\fewestComparisonSort.vbproj.GenerateResource.Cache
+C:\A1\work\fewestComparisonSort\fewestComparisonSort\fewestComparisonSort\obj\Debug\fewestComparisonSort.exe
+C:\A1\work\fewestComparisonSort\fewestComparisonSort\fewestComparisonSort\obj\Debug\fewestComparisonSort.xml
+C:\A1\work\fewestComparisonSort\fewestComparisonSort\fewestComparisonSort\obj\Debug\fewestComparisonSort.pdb

@@ -31,26 +31,35 @@ Public Class Form1
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Debug.WriteLine("*************Starting**************")
         Dim SortingItems As String()
-        Dim testInt As Integer
         Dim lstString As String()
 
         mEqualItemsIndex = 0
         ComparisonsCount = 0
         SortingItems = txtList.Lines.ToList().ToArray
-        If SortingItems.Any(Function(x) String.IsNullOrEmpty(x)) Then
-            MessageBox.Show("There are some blank lines." & vbNewLine & "Please remove them and start again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+        'Prevents from losing previous sort results
+        If txtSortedList.Lines().Count > 0 AndAlso _
+            vbNo = MessageBox.Show(Me, "This will clear your previous sorting result." _
+                                   & vbNewLine _
+                                   & "Do you want to continue?", _
+                                   "Start sorting...", _
+                                   MessageBoxButtons.YesNo, MessageBoxIcon.Warning) Then
             Return
         End If
 
-        'lstNumber = txtList.Lines.ToList() _
-        '.Where(Function(ln) Integer.TryParse(ln.Trim(), testInt)) _
-        '.Select(Function(ln) Convert.ToInt32(ln.Trim())).ToArray()
+        'We don't want to compare between an item and a blank(null) item
+        If SortingItems.Any(Function(x) String.IsNullOrEmpty(x)) Then
+            MessageBox.Show("There are some blank lines." _
+                            & vbNewLine _
+                            & "Please remove them and start again.", _
+                            "Error", _
+                            MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return
+        End If
 
         TotalItems = SortingItems.Count
         Try
-            'mergeSort(lstNumber, 0, lstNumber.Count - 1)
             QuickSort(SortingItems, 0, SortingItems.Count - 1)
         Catch ex As Exception
             MessageBox.Show(ex.StackTrace)

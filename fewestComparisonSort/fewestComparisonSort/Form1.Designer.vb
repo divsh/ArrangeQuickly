@@ -34,6 +34,8 @@ Partial Class Form1
         Me.txtList = New System.Windows.Forms.TextBox()
         Me.txtSortedList = New System.Windows.Forms.TextBox()
         Me.btnEqual = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -43,7 +45,7 @@ Partial Class Form1
         'Button1
         '
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.Location = New System.Drawing.Point(612, 293)
+        Me.Button1.Location = New System.Drawing.Point(612, 315)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 1
@@ -52,10 +54,10 @@ Partial Class Form1
         '
         'lblComparisonCount
         '
-        Me.lblComparisonCount.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.lblComparisonCount.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblComparisonCount.AutoSize = True
         Me.lblComparisonCount.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.lblComparisonCount.Location = New System.Drawing.Point(588, 416)
+        Me.lblComparisonCount.Location = New System.Drawing.Point(588, 438)
         Me.lblComparisonCount.Name = "lblComparisonCount"
         Me.lblComparisonCount.Size = New System.Drawing.Size(73, 13)
         Me.lblComparisonCount.TabIndex = 3
@@ -64,10 +66,10 @@ Partial Class Form1
         '
         'lblTotalItems
         '
-        Me.lblTotalItems.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.lblTotalItems.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblTotalItems.AutoSize = True
         Me.lblTotalItems.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.lblTotalItems.Location = New System.Drawing.Point(504, 416)
+        Me.lblTotalItems.Location = New System.Drawing.Point(504, 438)
         Me.lblTotalItems.Name = "lblTotalItems"
         Me.lblTotalItems.Size = New System.Drawing.Size(59, 13)
         Me.lblTotalItems.TabIndex = 4
@@ -77,7 +79,7 @@ Partial Class Form1
         '
         Me.btnA.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnA.Location = New System.Drawing.Point(12, 322)
+        Me.btnA.Location = New System.Drawing.Point(12, 344)
         Me.btnA.Name = "btnA"
         Me.btnA.Size = New System.Drawing.Size(675, 23)
         Me.btnA.TabIndex = 5
@@ -88,7 +90,7 @@ Partial Class Form1
         '
         Me.btnB.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnB.Location = New System.Drawing.Point(12, 351)
+        Me.btnB.Location = New System.Drawing.Point(12, 373)
         Me.btnB.Name = "btnB"
         Me.btnB.Size = New System.Drawing.Size(675, 23)
         Me.btnB.TabIndex = 6
@@ -99,7 +101,7 @@ Partial Class Form1
         '
         Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 296)
+        Me.Label1.Location = New System.Drawing.Point(12, 318)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(58, 13)
         Me.Label1.TabIndex = 7
@@ -108,7 +110,7 @@ Partial Class Form1
         'TextBox1
         '
         Me.TextBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.TextBox1.Location = New System.Drawing.Point(69, 293)
+        Me.TextBox1.Location = New System.Drawing.Point(69, 315)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(100, 20)
         Me.TextBox1.TabIndex = 8
@@ -117,7 +119,7 @@ Partial Class Form1
         '
         Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(175, 292)
+        Me.Label2.Location = New System.Drawing.Point(175, 314)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(391, 26)
         Me.Label2.TabIndex = 9
@@ -129,54 +131,79 @@ Partial Class Form1
         Me.SplitContainer1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.SplitContainer1.Location = New System.Drawing.Point(12, 12)
+        Me.SplitContainer1.Location = New System.Drawing.Point(12, 23)
         Me.SplitContainer1.Name = "SplitContainer1"
         '
         'SplitContainer1.Panel1
         '
         Me.SplitContainer1.Panel1.Controls.Add(Me.txtList)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Label3)
         '
         'SplitContainer1.Panel2
         '
+        Me.SplitContainer1.Panel2.Controls.Add(Me.Label4)
         Me.SplitContainer1.Panel2.Controls.Add(Me.txtSortedList)
-        Me.SplitContainer1.Size = New System.Drawing.Size(675, 275)
+        Me.SplitContainer1.Size = New System.Drawing.Size(675, 286)
         Me.SplitContainer1.SplitterDistance = 327
         Me.SplitContainer1.TabIndex = 10
         '
         'txtList
         '
-        Me.txtList.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtList.Location = New System.Drawing.Point(0, 0)
+        Me.txtList.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtList.Location = New System.Drawing.Point(0, 18)
         Me.txtList.Multiline = True
         Me.txtList.Name = "txtList"
-        Me.txtList.Size = New System.Drawing.Size(327, 275)
+        Me.txtList.Size = New System.Drawing.Size(327, 265)
         Me.txtList.TabIndex = 1
         '
         'txtSortedList
         '
-        Me.txtSortedList.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtSortedList.Location = New System.Drawing.Point(0, 0)
+        Me.txtSortedList.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtSortedList.Location = New System.Drawing.Point(0, 18)
         Me.txtSortedList.Multiline = True
         Me.txtSortedList.Name = "txtSortedList"
-        Me.txtSortedList.Size = New System.Drawing.Size(344, 275)
+        Me.txtSortedList.ReadOnly = True
+        Me.txtSortedList.Size = New System.Drawing.Size(344, 265)
         Me.txtSortedList.TabIndex = 3
         '
         'btnEqual
         '
         Me.btnEqual.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnEqual.Location = New System.Drawing.Point(12, 380)
+        Me.btnEqual.Location = New System.Drawing.Point(12, 402)
         Me.btnEqual.Name = "btnEqual"
         Me.btnEqual.Size = New System.Drawing.Size(675, 23)
         Me.btnEqual.TabIndex = 11
         Me.btnEqual.Text = "Equal"
         Me.btnEqual.UseVisualStyleBackColor = True
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(3, 2)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(170, 13)
+        Me.Label3.TabIndex = 12
+        Me.Label3.Text = "Write your items, one on each line:"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(3, 2)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(171, 13)
+        Me.Label4.TabIndex = 13
+        Me.Label4.Text = "Items arrange in order as specified:"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(699, 438)
+        Me.ClientSize = New System.Drawing.Size(699, 460)
         Me.Controls.Add(Me.btnEqual)
         Me.Controls.Add(Me.SplitContainer1)
         Me.Controls.Add(Me.Label2)
@@ -211,5 +238,7 @@ Partial Class Form1
     Friend WithEvents txtList As System.Windows.Forms.TextBox
     Friend WithEvents txtSortedList As System.Windows.Forms.TextBox
     Friend WithEvents btnEqual As System.Windows.Forms.Button
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
 
 End Class
